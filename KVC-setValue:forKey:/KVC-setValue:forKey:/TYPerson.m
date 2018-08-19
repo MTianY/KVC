@@ -27,4 +27,20 @@
     return YES;
 }
 
+- (void)willChangeValueForKey:(NSString *)key {
+    [super willChangeValueForKey:key];
+    
+    NSLog(@"调用了: %s",__func__);
+    
+}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    
+    
+    NSLog(@"调用了: %s---begin",__func__);
+    [super didChangeValueForKey:key];
+    NSLog(@"调用了: %s---end",__func__);
+    
+}
+
 @end

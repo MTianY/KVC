@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C4E15632129910000BA1C70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E15622129910000BA1C70 /* main.m */; };
-		4C4E156B2129911C00BA1C70 /* TYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E156A2129911C00BA1C70 /* TYPerson.m */; };
-		4C4E156E2129AE2900BA1C70 /* TYObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E156D2129AE2900BA1C70 /* TYObserver.m */; };
+		4C4E157C2129B50E00BA1C70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E157B2129B50E00BA1C70 /* main.m */; };
+		4C4E15842129B51700BA1C70 /* TYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E15832129B51700BA1C70 /* TYPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4C4E155D2129910000BA1C70 /* CopyFiles */ = {
+		4C4E15762129B50E00BA1C70 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,16 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C4E155F2129910000BA1C70 /* KVC-setValue:forKey: */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "KVC-setValue:forKey:"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C4E15622129910000BA1C70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C4E15692129911C00BA1C70 /* TYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPerson.h; sourceTree = "<group>"; };
-		4C4E156A2129911C00BA1C70 /* TYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPerson.m; sourceTree = "<group>"; };
-		4C4E156C2129AE2900BA1C70 /* TYObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYObserver.h; sourceTree = "<group>"; };
-		4C4E156D2129AE2900BA1C70 /* TYObserver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYObserver.m; sourceTree = "<group>"; };
+		4C4E15782129B50E00BA1C70 /* KVC-ValueforKey */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "KVC-ValueforKey"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4E157B2129B50E00BA1C70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C4E15822129B51700BA1C70 /* TYPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYPerson.h; sourceTree = "<group>"; };
+		4C4E15832129B51700BA1C70 /* TYPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TYPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4C4E155C2129910000BA1C70 /* Frameworks */ = {
+		4C4E15752129B50E00BA1C70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,100 +41,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C4E15562129910000BA1C70 = {
+		4C4E156F2129B50E00BA1C70 = {
 			isa = PBXGroup;
 			children = (
-				4C4E15612129910000BA1C70 /* KVC-setValue:forKey: */,
-				4C4E15602129910000BA1C70 /* Products */,
+				4C4E157A2129B50E00BA1C70 /* KVC-ValueforKey */,
+				4C4E15792129B50E00BA1C70 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4C4E15602129910000BA1C70 /* Products */ = {
+		4C4E15792129B50E00BA1C70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C4E155F2129910000BA1C70 /* KVC-setValue:forKey: */,
+				4C4E15782129B50E00BA1C70 /* KVC-ValueforKey */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C4E15612129910000BA1C70 /* KVC-setValue:forKey: */ = {
+		4C4E157A2129B50E00BA1C70 /* KVC-ValueforKey */ = {
 			isa = PBXGroup;
 			children = (
-				4C4E15622129910000BA1C70 /* main.m */,
-				4C4E15692129911C00BA1C70 /* TYPerson.h */,
-				4C4E156A2129911C00BA1C70 /* TYPerson.m */,
-				4C4E156C2129AE2900BA1C70 /* TYObserver.h */,
-				4C4E156D2129AE2900BA1C70 /* TYObserver.m */,
+				4C4E157B2129B50E00BA1C70 /* main.m */,
+				4C4E15822129B51700BA1C70 /* TYPerson.h */,
+				4C4E15832129B51700BA1C70 /* TYPerson.m */,
 			);
-			path = "KVC-setValue:forKey:";
+			path = "KVC-ValueforKey";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C4E155E2129910000BA1C70 /* KVC-setValue:forKey: */ = {
+		4C4E15772129B50E00BA1C70 /* KVC-ValueforKey */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C4E15662129910000BA1C70 /* Build configuration list for PBXNativeTarget "KVC-setValue:forKey:" */;
+			buildConfigurationList = 4C4E157F2129B50E00BA1C70 /* Build configuration list for PBXNativeTarget "KVC-ValueforKey" */;
 			buildPhases = (
-				4C4E155B2129910000BA1C70 /* Sources */,
-				4C4E155C2129910000BA1C70 /* Frameworks */,
-				4C4E155D2129910000BA1C70 /* CopyFiles */,
+				4C4E15742129B50E00BA1C70 /* Sources */,
+				4C4E15752129B50E00BA1C70 /* Frameworks */,
+				4C4E15762129B50E00BA1C70 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "KVC-setValue:forKey:";
-			productName = "KVC-setValue:forKey:";
-			productReference = 4C4E155F2129910000BA1C70 /* KVC-setValue:forKey: */;
+			name = "KVC-ValueforKey";
+			productName = "KVC-ValueforKey";
+			productReference = 4C4E15782129B50E00BA1C70 /* KVC-ValueforKey */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4C4E15572129910000BA1C70 /* Project object */ = {
+		4C4E15702129B50E00BA1C70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Maty;
 				TargetAttributes = {
-					4C4E155E2129910000BA1C70 = {
+					4C4E15772129B50E00BA1C70 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 4C4E155A2129910000BA1C70 /* Build configuration list for PBXProject "KVC-setValue:forKey:" */;
+			buildConfigurationList = 4C4E15732129B50E00BA1C70 /* Build configuration list for PBXProject "KVC-ValueforKey" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 4C4E15562129910000BA1C70;
-			productRefGroup = 4C4E15602129910000BA1C70 /* Products */;
+			mainGroup = 4C4E156F2129B50E00BA1C70;
+			productRefGroup = 4C4E15792129B50E00BA1C70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C4E155E2129910000BA1C70 /* KVC-setValue:forKey: */,
+				4C4E15772129B50E00BA1C70 /* KVC-ValueforKey */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C4E155B2129910000BA1C70 /* Sources */ = {
+		4C4E15742129B50E00BA1C70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4E156E2129AE2900BA1C70 /* TYObserver.m in Sources */,
-				4C4E15632129910000BA1C70 /* main.m in Sources */,
-				4C4E156B2129911C00BA1C70 /* TYPerson.m in Sources */,
+				4C4E157C2129B50E00BA1C70 /* main.m in Sources */,
+				4C4E15842129B51700BA1C70 /* TYPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4C4E15642129910000BA1C70 /* Debug */ = {
+		4C4E157D2129B50E00BA1C70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -195,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		4C4E15652129910000BA1C70 /* Release */ = {
+		4C4E157E2129B50E00BA1C70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -246,7 +240,7 @@
 			};
 			name = Release;
 		};
-		4C4E15672129910000BA1C70 /* Debug */ = {
+		4C4E15802129B50E00BA1C70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -255,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		4C4E15682129910000BA1C70 /* Release */ = {
+		4C4E15812129B50E00BA1C70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -267,25 +261,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C4E155A2129910000BA1C70 /* Build configuration list for PBXProject "KVC-setValue:forKey:" */ = {
+		4C4E15732129B50E00BA1C70 /* Build configuration list for PBXProject "KVC-ValueforKey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C4E15642129910000BA1C70 /* Debug */,
-				4C4E15652129910000BA1C70 /* Release */,
+				4C4E157D2129B50E00BA1C70 /* Debug */,
+				4C4E157E2129B50E00BA1C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C4E15662129910000BA1C70 /* Build configuration list for PBXNativeTarget "KVC-setValue:forKey:" */ = {
+		4C4E157F2129B50E00BA1C70 /* Build configuration list for PBXNativeTarget "KVC-ValueforKey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C4E15672129910000BA1C70 /* Debug */,
-				4C4E15682129910000BA1C70 /* Release */,
+				4C4E15802129B50E00BA1C70 /* Debug */,
+				4C4E15812129B50E00BA1C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4C4E15572129910000BA1C70 /* Project object */;
+	rootObject = 4C4E15702129B50E00BA1C70 /* Project object */;
 }

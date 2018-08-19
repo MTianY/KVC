@@ -71,3 +71,40 @@ NSLog(@"keyPath: no = %@",[person.student valueForKeyPath:@"no"]);
         - 如果返回 NO 
             - 调用`setValueForUndefinedKey:`并且抛异常,找不到 key 
 
+## 四.通过 KVC 给属性赋值,是否可以触发 KVO?
+
+#### 可以触发 KVO
+
+- 如果属性有 set 方法的实现,那么可以触发 KVO.
+- 如果属性没有 set 方法的实现,用 KVC 直接访问成员变量,依然可以触发 KVO.
+    - 这里它默认手动实现了下面的方法
+
+    ```objc
+    willChangeValue...
+    [super setKey:];
+    didChangeValue...
+    ``` 
+    
+    ## 五. `valueForKey:`实现原理
+    
+    ![](https://lh3.googleusercontent.com/2QO1BCGe-H_2AntvgVNFp_FqW-3AC5WBe6JsDsx8BZjUeqybgvRsx8GNT45aIZPOLgP_BGgXcGcJpACcVgE1w9Br_2fHM5Rztr9Mz2bod0Z-cKO5tlqRK__YEoM7aGXZgTEslrsK4aQXyoBN4wnr0n3lcqBn9wqbbDPFA5zBDhtIa-8kTHJpHPc-toT4f_bSPnXGlZsqOnXxJ55KueYzyMDCI5rInhGyDqADFAmbrdALIc96Ocb77xFpcoCow5vOY1aU6u8yX-SZKp4HX3dLrrLZGSODDLpXF2d8ozqJxC5Xf9UGRXbjA5NJLhYJDIPW5-MjY_48q4n5F-EYGFqCktBF1tSFZ0w0vt-RQL0pEvwD8DlQIZi2Ni7IoFOXmUgEFJzWW6zsd95AhPZ78hHAseYiVGcCWh6eM8TIgDr0fI8ONZkqi0mDvxDi6cZDqusnIe2oLaTRevnObBcFB5y3rQHl4aVuPgclSd4jPg46EoIuZ4gXEPT-7Jjo6v1z8VbDIG7gVyVOIiBecInCGJX3pQwFi0unyYJrm-1xe_UlvFTqBO2by8k5IoqA7AxFdIfyMzylh0TnS1BLvPg_YR_N-zjc3Iabint6vMcnhw=w1024-h768-no)
+
+
+#### 1.有属性的情况
+
+有属性的情况,取值会直接调用`getKey:`方法.
+
+#### 2.没有属性只有成员变量的情况
+
+- 优先查找`- (返回值类型)getKey` 方法
+- 如果查找不到`getKey`方法,那么接着找`- (返回值类型)key`方法.
+- 如果还是找不到`key`方法,那么接着找`- (返回值类型)isKey`方法.
+- 如果仍旧找不到,最后找`- (返回值类型)_key`方法.
+- 如果都找不到,调用`accessInstanceVariablesDirectly`方法,看起返回值
+    - 如果返回 YES
+        - 按照`_key、_isKey、key、isKey`顺序查找成员变量
+            - 找到了直接返回值
+            - 找不到调用`valueforUndefinedKey:`方法并抛异常  
+    - 如果返回 NO
+        - 调用: `valueforUndefinedKey:`方法并抛异常.    
+
