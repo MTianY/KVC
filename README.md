@@ -58,3 +58,16 @@ NSLog(@"keyPath: no = %@",[person.student valueForKeyPath:@"no"]);
 
 ```
 
+## 三. `setValue:forKey:`原理
+
+![](https://lh3.googleusercontent.com/XX1hoB2p4L2mCqjy2xuFRtXjevwWhVyggIZAOJcYKFLkpU4QPzSBZCUmRqJJT4jJ-nwI28EVM84WOwzurVthHgWduyGG7uYXnvTBREA6KZ2J7IBnNsiqIm1wqSb6s2za0olgzbRUy2o8TnYxsFjo8UxjHsy7-66jc9nbSTxEIqedTaVMgvEp_-9rg8tV1VQ1oEWBMYmFNeG4bZp9UiLR_t187yr7bus4y5jCSdGqbL-re2QLIx1TC869rFAYZcuDPl8Iq5OvO_gzaJuRBksOEi6NauGFZjEtRMs3IJmRTHcLWWvpNVNpi2mjQJ13yHPxD6kx0bGWWMYYd0k9VTBQ_6lZSY1WKqhGmU5uYMZqdE-hrQe4E9qibNeMW8vr4bbWvNazR3q0-y_2StsigbZtQAo_1H87xS6_NeilzC_bBmZsmKsXuZiDfN9f0FXfgJpYXxSIXhVt_IrjxYvjMCeVGM3ceWlX0_4AV5Axmvy75Tvl_6EqkfNlYu3Uuu0VUDXLDRg708t4gdV3gYNoiy0_YlM5iSklOkm8xHsv1ONCbeWjuYrSRyD8sKKNWykOHHQEGVz_nC6x2bLvNhWgqbw0e-dqOYFCrrlVV0rgHQ=w1024-h768-no)
+
+- 首先查找`setKey:`方法.如果找到: `传递参数,调用 setKey:`方法.
+ - 如果`没有找到 setKey:` 方法,那么接着查找`_setKey:`方法.如果找到:`传递参数,调用_ setKey: 方法.`
+ - 如果`setKey:`和`_setKey:`方法都没有找到,那么调用`+ (BOOL)accessInstanceVariablesDirectly`方法.该方法的含义是:`是否可以直接访问成员变量`.查看其返回值
+     - 如果返回值为`YES`
+            - 那么将严格按照顺序查找成员变量: `_key、 _isKey、 key、 isKey`.如果找到其中某个成员变量,那么就`直接赋值`.
+            - 如果一个都没有找到,那么调用`setValueForUndefinedKey:`方法,并且抛异常,找不到 key
+        - 如果返回 NO 
+            - 调用`setValueForUndefinedKey:`并且抛异常,找不到 key 
+
